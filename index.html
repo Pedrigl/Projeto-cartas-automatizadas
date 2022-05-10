@@ -1,4 +1,7 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
+<meta charset="UTF-8">
     <style>
     body {
         height: 1050px;
@@ -19,10 +22,10 @@
     <img src="https://github.com/Pedrigl/Projeto-cartas-/blob/main/banner.png?raw=true" alt="Imagem">
 </Picture>
 <table border=0 align=left width=1 height=800 >
-<tr><td bgcolor=black></td></tr>
+<tr><td bgcolor=transparent></td></tr>
 </table>
 <table border=0 align=right width=1 height=800 >
-<tr><td bgcolor=black></td></tr>
+<tr><td bgcolor=transparent></td></tr>
 </table>
 </div>
 <p style="text-align: center; font-size:14px">Palmas: @{triggerBody()['key-button-date']}</p>
@@ -34,9 +37,9 @@
      a Energisa Tocantins Distribuidora De Energia S A, interromperá o fornecimento de energia elétrica<br>
      nesta unidade consumidora na(s) data(s) e horário(s) a seguir:</p>
 <b style="font-size: 14px;padding-left: 15%;">Início: </b>
-<b style="font-size: 12px;"><strong>@{items('Aplicar_a_cada')?['H INICIO DA INTERVENCAO']}</strong></b>
+<b style="font-size: 12px;"><strong>@{addseconds('1899-12-30', int(formatNumber(mul(float(item()?['H-COMEÇO']),86400),'0','en-us')),'dd-MM-yyyy HH:mm')}</strong></b>
 <b style="font-size: 14px;padding-left: 15%;">Término: </b>
-<b style="font-size: 12px;"><strong>@{items('Aplicar_a_cada')?['H TERMINO DA INTERVENCAO']}</strong></b>
+<b style="font-size: 12px;"><strong>@{addseconds('1899-12-30', int(formatNumber(mul(float(item()?['H-COMEÇO']),86400),'0','en-us')),'dd-MM-yyyy HH:mm')}</strong></b>
 
 <p style="font-size: 14px;">Para maior segurança, as instalações deverão ser consideradas permanentemente energizadas, pois caso<br> 
     os serviços sejam concluídos antes do horário previsto, o fornecimento será restabelecido imediatamente,<br>
