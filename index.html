@@ -14,6 +14,14 @@
         border-width: 1px;
         border-style: solid;
     }
+    #dados {
+        width: 52%;
+        display: inline-block;
+    }
+    #uc {
+        width: 45%;
+        display: inline-block;
+    }
     </style>
   </head>
 <body>
@@ -29,10 +37,15 @@
 </table>
 </div>
 <p style="text-align: center; font-size:14px">Palmas: @{triggerBody()['key-button-date']}</p>
+<div id="dados">
 <b><strong>A</strong></b>
 <p style="font-size: 12px;"><strong>@{items('Aplicar_a_cada')?['NOME DO CLIENTE']}</strong></p>
+<p style="font-size: 12px;"><strong>@{items('Aplicar_a_cada')?['ENDEREÇO']}</strong></p>
+</div>
+<div id="uc">
 <p style="font-size: 12px;text-align: right;">Unidade Consumidora</p>
 <p style="font-size: 12px;text-align: right;"><strong>@{items('Aplicar_a_cada')?['CDC']}</strong></p><br>
+</div>
 <p style="font-size: 14px;">Com o objetivo de executar melhorias na rede de distribuição de energia elétrica,<br>
      a Energisa Tocantins Distribuidora De Energia S A, interromperá o fornecimento de energia elétrica<br>
      nesta unidade consumidora na(s) data(s) e horário(s) a seguir:</p>
